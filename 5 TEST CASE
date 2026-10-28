@@ -1,0 +1,6 @@
+Mã	Chức năng kiểm thử	Kết quả thực tế	Đánh giá
+TC01	Đăng ký sự kiện hợp lệ	Đăng ký thành công	PASS
+TC02	Đăng ký trùng sự kiện	Thông báo đã đăng ký rồi	PASS
+TC03	Hủy đăng ký hợp lệ	Hủy thành công	PASS
+TC04	Hủy đăng ký quá hạn	Thông báo phải hủy trước 24 giờ	PASS
+TC05	Xóa đăng ký đã hủy	Sự kiện biến mất khỏi danh sách	PASS
