@@ -26,6 +26,8 @@ function dinhDangNgayGio($value): string
 
 $danhSachDangKy = $danhSachDangKy ?? [];
 $tuKhoa = $tuKhoa ?? '';
+$thongBaoNhacNho = $thongBaoNhacNho ?? '';
+$loaiThongBao = $loaiThongBao ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -438,6 +440,36 @@ $tuKhoa = $tuKhoa ?? '';
             background: #fff0f0;
             border: 1px solid #f3cccc;
         }
+        
+.thong-bao-nhac-nho {
+    padding: 15px 18px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid;
+}
+
+.thong-bao-nhac-nho p {
+    margin: 6px 0 0;
+}
+
+.thong-bao-nhac-nho.warning {
+    color: #856404;
+    background: #fff8df;
+    border-color: #f3df9b;
+}
+
+.thong-bao-nhac-nho.danger {
+    color: #a82f2f;
+    background: #fff0f0;
+    border-color: #f3cccc;
+}
+
+.thong-bao-nhac-nho.success {
+    color: #17623e;
+    background: #e7f7ef;
+    border-color: #c3ead5;
+}
 
         .modal-overlay {
             display: none;
@@ -577,6 +609,13 @@ $tuKhoa = $tuKhoa ?? '';
             Theo dõi các sự kiện bạn đã đăng ký và quản lý đăng ký của mình.
         </p>
     </div>
+
+<?php if (!empty($thongBaoNhacNho)): ?>
+    <div class="thong-bao-nhac-nho <?= e($loaiThongBao) ?>">
+        <strong>Thông báo nhắc nhở</strong>
+        <p><?= e($thongBaoNhacNho) ?></p>
+    </div>
+<?php endif; ?>
 
     <div id="thongBao" class="message" role="status" aria-live="polite"></div>
 
